@@ -12,9 +12,9 @@ export default function Hero({ }: Props) {
             <BackgroundCircles />
             <Image className='relative h-[250px] w-[250px] object-cover rounded-full' width={200} height={200} src='/sticker.png' alt='Avatar' />
 
-            <h2 className=' relative z-50 tracking-[15px] text-gray-300 uppercase'>Front-End Developer</h2>
+            <h2 className=' relative z-50 tracking-[15px] text-gray-300 uppercase lg:text-[16px] md:text-[20px] sm:text-[15px]'>Front-End Developer</h2>
 
-            <h1 className='text-4xl lg:text-6xl font-semibold px-10 relative z-50'>
+            <h1 className='text-4xl lg:text-6xl font-semibold px-10 relative z-50 text-[24px] sm:text-[24px]'>
                 <Typewriter
                     words={['Olexandr Krasulia', '{Sanio}', '<TheGuyWhoLovesCoffee/>', 'Dreamer.tsx']}
                     loop={true}
@@ -34,8 +34,11 @@ export default function Hero({ }: Props) {
                 <Link href="#skills">
                     <button className='heroButtons'>Skills</button>
                 </Link>
-                <Link href="#project">
+                <Link href="#projects">
                     <button className='heroButtons'>Project</button>
+                </Link>
+                <Link href="#contact-me">
+                    <button className='heroButtons'>Contact Me</button>
                 </Link>
             </div>
         </div>

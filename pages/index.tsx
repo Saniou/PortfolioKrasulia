@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <About />
       </section>
 
-      <section id='skills' className='snap-start'>
+      <section id='skills' className='snap-center'>
         <Skills />
       </section>
 

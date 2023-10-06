@@ -1,7 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-import sticker from '/public//stickerAbout.png'
 
 type Props = {}
 
@@ -40,22 +38,22 @@ export default function About({ }: Props) {
         src='/stickerAbout.png' alt='about-image' />
 
       <div className='space-y-5 px-0 md:px-10'>
-        <h4 className=' text-center text-4xl lg:text-4xl sm:text-4xl font-semibold md:text-2xl '>
+        <h4 className=' text-center text-xl lg:text-4xl sm:text-4xl font-semibold md:text-2xl '>
           Here is a{" "}
           <span className='underline decoration-[#F7AB0A]'>
             little
           </span>{" "}background
         </h4>
-        <p className='text-base text-gray-400 text-center'>
-          My name is Oleksandr! 💯<br /><br />
+        <p className='text-gray-400 text-center text-sm lg:text-[16px] md:text-sm sm:text-sm'>
+          My name is Oleksandr! 💯<br />
 
-          I&apos;m a front-end developer with 1 year of experience. I&apos;m proficient in a wide range of technologies and tools, including HTML, CSS, Git, SASS/SCSS, JavaScript, TypeScript, ReactJS, NextJS, NodeJS, TailwindCSS, and PostCSS.💡<br /><br />
+          I&apos;m a front-end developer with 1 year of experience.<br />
 
           I actively use various libraries and frameworks like Material-UI (MUI), DaisyUI, Tremor, Versel, NextAuth, Quill, Shadcn, Motion Framer, and HeroIconic.<br />
           My professional journey was enriched by my education at Hillel IT-school, where I gained essential skills for building high-quality web applications.✨<br />
           Over the past year, I&apos;ve successfully completed several projects I&apos;m proud of. One is a music app utilizing the Spotify API for music streaming. Another is a small online shop with user registration and login functionality. I&apos;ve also created a clone of the Margelo website, showcasing various animations to highlight my animation skills.<br />
 
-          Currently, I&#39;m focused on a real startup project — an extension for the Google Chrome browser serving as a planner and event organizer.🚀<br /><br />
+          Currently, I&#39;m focused on a real startup project — an extension for the Google Chrome browser serving as a planner and event organizer.🚀<br />
 
           Thank you for your attention and the opportunity to share my experiences and achievements. 😊❤️
         </p>
