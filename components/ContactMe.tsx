@@ -9,9 +9,8 @@ export default function ContactMe({ }: Props) {
 
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-
     emailjs.sendForm('service_jrt93oa', 'template_z9k83cg', form.current, 'H5yR7a6m5cPUeu1HF')
       .then((result) => {
         console.log(result.text);
