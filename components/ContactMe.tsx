@@ -7,16 +7,22 @@ type Props = {}
 
 export default function ContactMe({ }: Props) {
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement | null>(null);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    emailjs.sendForm('service_jrt93oa', 'template_z9k83cg', form.current, 'H5yR7a6m5cPUeu1HF')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
+    if (form.current) {
+      emailjs
+        .sendForm('service_jrt93oa', 'template_z9k83cg', form.current, 'H5yR7a6m5cPUeu1HF')
+        .then(
+          (result) => {
+            console.log('Email sent successfully:', result.text);
+          },
+          (error) => {
+            console.error('Email sending failed:', error.text);
+          }
+        );
+    }
   };
 
   return (
