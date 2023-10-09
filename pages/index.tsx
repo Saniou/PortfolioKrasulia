@@ -7,10 +7,12 @@ import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap snap-y snap-mandatory overflow-scroll z-0'>
+    <div className='bg-[rgb(36,36,36)] text-white h-screen snap snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0'>
 
       <Head>
         <title>Krasulia/Portfolio</title>
@@ -39,6 +41,12 @@ const Home: NextPage = () => {
       <section id='contact-me' className='snap-center'>
         <ContactMe />
       </section>
+
+      <Link href='#hero'>
+        <div className='sticky bottom-5 right-5 w-full cursor-pointer'>
+          <Image src='/icons8-sort-up-96 (2).png' width={50} height={50} alt='arrow up'/>
+        </div>
+      </Link>
 
     </div>
   )

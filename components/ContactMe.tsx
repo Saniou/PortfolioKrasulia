@@ -1,11 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 import emailjs from '@emailjs/browser';
+import Modal from './Modal';
 
 type Props = {}
 
 export default function ContactMe({ }: Props) {
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const form = useRef<HTMLFormElement | null>(null);
 
@@ -41,7 +44,7 @@ export default function ContactMe({ }: Props) {
       </h3>
 
       <div className='flex flex-col space-y-10'>
-        <h4 className='text-4xl font-semibold text-center'>
+        <h4 className='text-2xl font-semibold text-center '>
           I have got just what yoy need. {" "}
           <span className='decoration-[#F7AB0A]/50 underline'>
             Let&apos;s Talk.
@@ -51,15 +54,15 @@ export default function ContactMe({ }: Props) {
         <div className='space-y-10'>
           <div className='flex items-center space-x-5 justify-center'>
             <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-            <p className='text-2xl'>+380731175371 / +380682040053</p>
+            <p className='text-xl'>+380731175371 / +380682040053</p>
           </div>
           <div className='flex items-center space-x-5 justify-center'>
             <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-            <p className='text-2xl'>Kyiv, Ukraine</p>
+            <p className='text-xl'>Kyiv, Ukraine</p>
           </div>
           <div className='flex items-center space-x-5 justify-center'>
             <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-            <p className='text-2xl'>krasulazr@gmail.com</p>
+            <p className='text-xl'>krasulazr@gmail.com</p>
           </div>
         </div>
 
@@ -69,9 +72,9 @@ export default function ContactMe({ }: Props) {
 
           <div className='justify-between space-x-2 '>
             <input
-              className='contactInput' name='name' type='text' placeholder='Name' />
+              className='contactInput w-40' name='name' type='text' placeholder='Name' />
             <input
-              className='contactInput' name='email' type='email' placeholder='Email' />
+              className='contactInput w-52' name='email' type='email' placeholder='Email' />
           </div>
 
           <input
@@ -81,7 +84,9 @@ export default function ContactMe({ }: Props) {
             placeholder='Message' name='message' className='contactInput' />
 
           <button
-            type='submit' className='bg-[#F7AB0A] py-5 rounded-md text-black font-bold text-lg'>Submit</button>
+            type='submit' className='bg-[#F7AB0A] py-5 rounded-md text-black font-bold text-lg' onClick={() => setIsOpen(true)}>Submit</button>
+
+          {isOpen && <Modal setIsOpen={setIsOpen} />}
 
         </form>
 
