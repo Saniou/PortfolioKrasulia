@@ -15,6 +15,17 @@ export default function ContactMe({ }: Props) {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     if (form.current) {
+      const formData = new FormData(form.current);
+      const name = formData.get('name') as string;
+      const email = formData.get('email') as string;
+      const subject = formData.get('subject') as string;
+      const message = formData.get('message') as string;
+
+      if (!name || !email || !subject || !message) {
+        setIsOpen(false);
+        return;
+      }
+
       emailjs
         .sendForm('service_jrt93oa', 'template_z9k83cg', form.current, 'H5yR7a6m5cPUeu1HF')
         .then(
