@@ -29,7 +29,7 @@ export default function Skills({ }: Props) {
 
       <div className='grid grid-cols-4 gap-5'>
         {skillData.map((skill, index) => (
-          <Skill key={index} progress={[skill.level]} images={[skill.imageUrl]} />
+          <Skill key={index} progress={skill.level} images={skill.imageUrl} />
         ))}
       </div>
 
