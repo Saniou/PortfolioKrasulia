@@ -9,8 +9,9 @@ export default function Projects({ }: Props) {
     {
       id: 1,
       title: 'Spotify-Clone',
-      description: 'This app is a clone of the popular Spotify app built entirely using NextJS and the SpotifyAPI. Also used such technologies as: mui, bootstrap, lodash, next-auth, recoil and tailwindCSS. Also created the ability to pause a song on the player and change the volume.',
-      projectPhoto: '/1.png'
+      description: 'This app is a Spotify clone created with Next.js and the Spotify API. It incorporates various technologies, including Next-Auth, Recoil, and Tailwind CSS. Additionally, it offers features like song pausing and volume adjustment.',
+      projectPhoto: '/1.png',
+      
     },
     {
       id: 2,
@@ -21,7 +22,7 @@ export default function Projects({ }: Props) {
     {
       id: 3,
       title: 'Rozetka-Shop + Server',
-      description: 'This is my first project written in React, a server was also written for it to authorize the user, display products and enter their product documentation with the ability to add, edit and delete. He was also able to implement the possibility of changing the light and dark version of the site',
+      description: 'This is my inaugural React project, featuring user authentication, product display, and documentation management. It includes functionalities for adding, editing, and deleting products, as well as support for light and dark themes.',
       projectPhoto: '/3.png'
     },
     {
@@ -49,10 +50,8 @@ export default function Projects({ }: Props) {
 
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
           {projectObjects.map((project, i) => (
-            <>
-              <div key={project.id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
-
-                <motion.div
+            <div key={project.id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
+              <motion.div
                 initial={{
                   y: -300,
                   opacity: 0
@@ -64,22 +63,20 @@ export default function Projects({ }: Props) {
                 transition={{
                   duration: 1.2,
                 }}>
-                  <Image src={project.projectPhoto} alt='project' width={800} height={800} />
-                </motion.div>
-                <div className='space-y-10 px-0 md:px-10 max-w-6xl '>
-                  <h4 className='text-4xl font-semibold text-center'>
-                    <span className='decoration-[#F7AB02] underline'>Case Study {i + 1} of {projectObjects.length}:</span>
-                    {' ' + project.title}
-                  </h4>
-                  <p className='opacity-70 text-lg text-center md:text-left'>
-                    {project.description}
-                  </p>
-                </div>
+                <Image src={project.projectPhoto} alt='project' width={500} height={500} className='lg:w-[500px]' />
+              </motion.div>
+              <div className='space-y-10 px-0 md:px-10 max-w-6xl '>
+                <h4 className='text-md font-semibold -mb-8 text-center'>
+                  <span className='decoration-[#F7AB02] underline'>Case Study {i + 1} of {projectObjects.length}:</span>
+                  {' ' + project.title}
+                </h4>
+                <p className='opacity-70 text-md text-center'>
+                  {project.description}
+                </p>
               </div>
-            </>
+            </div>
           ))}
         </div>
-
         <div className='w-full absolute top-[30%] bg-gradient-to-br from-yellow-500/30 via-red-400/40 left-0 h-[500px] -skew-y-12' />
       </motion.div>
     </>

@@ -43,7 +43,7 @@ const Home: NextPage = () => {
       </section>
 
       <Link href='#hero'>
-        <div className='sticky bottom-5 right-5 w-full cursor-pointer'>
+        <div className='w-50 h-50 sticky bottom-5 right-5 cursor-pointer'>
           <Image src='/icons8-sort-up-96 (2).png' width={50} height={50} alt='arrow up'/>
         </div>
       </Link>
