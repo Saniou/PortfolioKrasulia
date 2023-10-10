@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 type SkillProps = {
   index: number,
   directionLeft?: boolean;
-  images: string[];
+  images: string;
   progress: string;
 };
 
