@@ -49,7 +49,7 @@ export default function About({ }: Props) {
 
           I&apos;m a front-end developer with 1 year of experience.<br />
 
-          I actively use various libraries and frameworks like Material-UI (MUI), DaisyUI, Tremor, Versel, NextAuth, Quill, Shadcn, Motion Framer, and HeroIconic.<br />
+          I actively use various libraries and frameworks like Material-UI (MUI), DaisyUI, Tremor, Versel, NextAuth, Clerk, MapBox Api,  Quill, Shadcn, Motion Framer, and HeroIconic.<br />
           My professional journey was enriched by my education at Hillel IT-school, where I gained essential skills for building high-quality web applications.✨<br />
           Over the past year, I&apos;ve successfully completed several projects I&apos;m proud of. One is a music app utilizing the Spotify API for music streaming. Another is a small online shop with user registration and login functionality. I&apos;ve also created a clone of the Margelo website, showcasing various animations to highlight my animation skills.<br />
 

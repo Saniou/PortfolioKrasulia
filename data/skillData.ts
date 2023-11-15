@@ -12,6 +12,10 @@ export const skillData = [
       level: '75%',
     },
     {
+      imageUrl: 'https://img.icons8.com/?size=256&id=wpZmKzk11AzJ&format=png',
+      level: '55%',
+    },
+    {
       imageUrl: 'https://img.icons8.com/?size=256&id=bzf0DqjXFHIW&format=png',
       level: '75%',
     },

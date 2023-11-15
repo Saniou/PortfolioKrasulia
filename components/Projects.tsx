@@ -8,28 +8,36 @@ export default function Projects({ }: Props) {
   const projectObjects = [
     {
       id: 1,
-      title: 'Spotify-Clone',
-      description: 'This app is a Spotify clone created with Next.js and the Spotify API. It incorporates various technologies, including Next-Auth, Recoil, and Tailwind CSS. Additionally, it offers features like song pausing and volume adjustment.',
-      projectPhoto: '/1.png',
-      
+      title: 'Drive-App',
+      description: "This project aims to recreate the atmosphere of the film and showcase technical solutions based on a fictional navigation system derived from the movie's locations",
+      projectPhoto: '/5.png',
+      link: 'https://drive-blush.vercel.app/'
     },
     {
       id: 2,
       title: 'Margelo-Clone',
       description: "Margelo's site was created using NextJS/Typescript using various libraries for horizontal slides such as embla and the Tailwind CSS framework",
-      projectPhoto: '/2.png'
+      projectPhoto: '/2.png',
+      link: 'https://next-js-margelo-clone.vercel.app/'
     },
     {
       id: 3,
-      title: 'Rozetka-Shop + Server',
-      description: 'This is my inaugural React project, featuring user authentication, product display, and documentation management. It includes functionalities for adding, editing, and deleting products, as well as support for light and dark themes.',
-      projectPhoto: '/3.png'
+      title: 'Organaizer-Sokolia',
+      description: 'The project I am currently working on allows the user to create his notes or tasks with the ability to upload photos. This project was conceived as an application for Google Chrome',
+      projectPhoto: '/4.png',
+      link: 'https://serhiichuk.github.io/sokolia/'
     },
     {
       id: 4,
-      title: 'Organaizer-Sokolia',
-      description: 'The project I am currently working on allows the user to create his notes or tasks with the ability to upload photos. This project was conceived as an application for Google Chrome',
-      projectPhoto: '/4.png'
+      title: 'Spotify-Clone',
+      description: 'This app is a Spotify clone created with Next.js and the Spotify API. It incorporates various technologies, including Next-Auth, Recoil, and Tailwind CSS. Additionally, it offers features like song pausing and volume adjustment.',
+      projectPhoto: '/1.png',
+    },
+    {
+      id: 5,
+      title: 'Rozetka-Shop + Server',
+      description: 'This is my inaugural React project, featuring user authentication, product display, and documentation management. It includes functionalities for adding, editing, and deleting products, as well as support for light and dark themes.',
+      projectPhoto: '/3.png',
     },
   ]
   return (
@@ -63,16 +71,23 @@ export default function Projects({ }: Props) {
                 transition={{
                   duration: 1.2,
                 }}>
-                <Image src={project.projectPhoto} alt='project' width={500} height={500} className='lg:w-[500px]' />
+                <Image src={project.projectPhoto} alt='project' width={600} height={600} className='lg:w-[600px]' />
               </motion.div>
-              <div className='space-y-10 px-0 md:px-10 max-w-6xl '>
-                <h4 className='text-md font-semibold -mb-8 text-center'>
+              <div className='space-y-10 px-0 md:px-10 max-w-6xl items-center '>
+                <h4 className='text-md font-semibold -mb-8 text-center items-center'>
                   <span className='decoration-[#F7AB02] underline'>Case Study {i + 1} of {projectObjects.length}:</span>
                   {' ' + project.title}
                 </h4>
-                <p className='opacity-70 text-md text-center'>
+                <p className='opacity-70 text-md text-center items-center'>
                   {project.description}
                 </p>
+                {project.link ? (
+                  <p className='text-[#F7AB02] font-bold text-center'>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧{' '}
+                      <span className='text-blue-500 '>ClickME</span>
+                    </a>
+                  </p>
+                ) : null}
               </div>
             </div>
           ))}
